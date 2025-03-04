@@ -26,7 +26,7 @@ def detect_lang(text):
 
 def split_sents(text, lang):
     if lang in LANG.SPLITTER:
-        if lang == 'zh':
+        if lang == 'zh' or lang == 'ja':  
             sents = _split_zh(text)
         else:
             splitter = SentenceSplitter(language=lang)
@@ -92,6 +92,7 @@ class LANG:
         'hu': 'Hungarian',
         'is': 'Icelandic',
         'it': 'Italian',
+        'ja': 'Japanese',  
         'lt': 'Lithuanian',
         'lv': 'Latvian',
         'no': 'Norwegian',
